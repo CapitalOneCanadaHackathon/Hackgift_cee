@@ -1,11 +1,11 @@
 <?php
 function create_member_post_type()
 {
-    register_post_type('Members',
+    register_post_type('cee_members',
     [
     'labels' => [
-        'name' => __('Members'),
-        'singular_name' => __('Member'),
+        'name' => __('CEE Members'),
+        'singular_name' => __('CEE Member'),
     ],
     'public' => true,
     'has_archive' => true,
