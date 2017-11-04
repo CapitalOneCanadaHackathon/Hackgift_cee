@@ -1,6 +1,10 @@
 <?php 
 
 class socialMedia {
+
+    public function __construct(){
+        add_action('init', $this, array(grab_twitter_activity()));
+    }
     public function generate_email_report(){
         
     }
@@ -11,6 +15,7 @@ class socialMedia {
 
     }
     public function grab_twitter_activity(){
+        var_dump('test');die();
 
     }
     public function grab_facebook_data(){
