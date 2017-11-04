@@ -13,6 +13,7 @@
 //INCLUDES
 require_once plugin_dir_path( __FILE__ ) . 'includes/program-partner-post-type.php';
 require_once plugin_dir_path( __FILE__ ) . 'includes/generate-program-partner-input-button.php';
+require_once plugin_dir_path( __FILE__ ) . 'includes/members-custom-post-type.php';
 
 //PLUGIN RESOURCES
 function admin_load_js(){
