@@ -11,8 +11,8 @@
 */
 
 //INCLUDES
-require_once plugin_dir_path( __FILE__ ) . 'includes/participant-post-type.php';
-require_once plugin_dir_path( __FILE__ ) . 'includes/generate-student-field-group-acf.php';
+require_once plugin_dir_path( __FILE__ ) . 'includes/program-partner-post-type.php';
+require_once plugin_dir_path( __FILE__ ) . 'includes/generate-program-partner-input-button.php';
 
 //PLUGIN RESOURCES
 function admin_load_js(){
