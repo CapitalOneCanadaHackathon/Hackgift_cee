@@ -2,11 +2,11 @@
 
 ## Team members
 
-Bryan Stephens
-Stevan Djau
-Josh McCormick
-Kevin Sanabria
-Seirra Katrian
+* Bryan Stephens
+* Stevan Djau
+* Josh McCormick
+* Kevin Sanabria
+* Seirra Katrian
 
 ## Challenge
 
