@@ -8,6 +8,12 @@ Protocol: Plain FTP (insecure)/ Explicit FTP over TLS
 ##IP Address (2017-11-04)
 141.117.117.188
 
+##SQL credentials
+Host: localhost
+DB: stephbry_giftcode2017
+U: stephbry_gcsa
+P: b||Bs||S
+
 ##WP Credentials
 URL: giftcode2017.brysteph.com/wordpress
 U: ceeadmin
