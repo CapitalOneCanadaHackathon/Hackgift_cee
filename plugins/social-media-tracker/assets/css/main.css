@@ -1,0 +1,42 @@
+.info__err {
+    background: #ff4d4d;
+    width:95%;
+    border-radius: 4px;
+    margin-bottom:20px; 
+    display: none;
+}
+
+.info__err span {
+    line-height: 2em;
+    color:#FFF;
+    padding: 25px 10px;
+}
+
+.info__listArea {
+    display: inline-block;
+    width: 35%;
+}
+
+.info__listArea--select {
+    width:80%;
+    margin: 10px auto;
+}
+
+.info__inputArea {
+    display: inline-block;
+    width:60%;
+}
+
+.info__inputArea--text {
+    width:100%;
+    vertical-align: top;
+    margin: 10px auto;
+}
+
+.info__btn {
+    float:right;
+}
+
+div[class^="info__"]{
+    vertical-align: top;
+}

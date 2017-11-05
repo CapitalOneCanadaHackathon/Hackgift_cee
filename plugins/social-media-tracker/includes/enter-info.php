@@ -50,12 +50,20 @@ foreach($students as $student){
 ?>
 
 <h1>Enter the Info for your CEE member here.</h1>
-
-<select class="cee_member" name="student">
-    <?php foreach ($studentsSelectBox as $option) :?>
-        <option value="<?php echo $option['value']?>"><?php echo $option['text'];?></option>
-<?php endforeach;?>    
-</select>
-<textarea class="cee_notes">
-</textarea>
-<button class="submit enter-member-data">Submit</button>
+<div class="info__err">
+    <span name="errMsg"></span>
+</div>
+<div class="info__listArea"]>
+    <label for="student" >Student</label><br />
+    <select name="student" class="info__listArea--select">
+        <?php foreach ($studentsSelectBox as $option) :?>
+            <option value="<?php echo $option['value']?>"><?php echo $option['text'];?></option>
+    <?php endforeach;?>    
+    </select>
+</div>
+<div class="info__inputArea">
+    <label for="note">Note</label><br />
+    <textarea class="notes info__inputArea--text" name="note" rows="10">
+    </textarea>
+    <button class="submit button-primary info__btn">Submit</button>
+</div>
