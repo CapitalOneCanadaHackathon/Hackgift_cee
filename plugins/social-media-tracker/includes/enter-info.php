@@ -1,4 +1,3 @@
-<h1>Enter the Info for your student here.</h1>
 <?php function d($value){
     if (is_array($value)){
         echo '<pre>' .var_dump($value); echo '</pre>';die();
@@ -50,12 +49,13 @@ foreach($students as $student){
 }
 ?>
 
+<h1>Enter the Info for your CEE member here.</h1>
 
-<select name="student">
+<select class="cee_member" name="student">
     <?php foreach ($studentsSelectBox as $option) :?>
         <option value="<?php echo $option['value']?>"><?php echo $option['text'];?></option>
 <?php endforeach;?>    
 </select>
-<textarea class="notes">
+<textarea class="cee_notes">
 </textarea>
-<button class="submit">Submit</button>
+<button class="submit enter-member-data">Submit</button>

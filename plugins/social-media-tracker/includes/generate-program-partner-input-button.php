@@ -1,4 +1,4 @@
-<?
+<?php
 add_action('admin_menu', 'generate_partner_button');
 
 function generate_partner_button(){
