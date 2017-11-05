@@ -1,24 +1,15 @@
-<h1>Enter the Info for your student here.</h1>
-<?php
-function d($obj) {
-	echo '<pre>';
-	print_r($obj);
-	echo '</pre>';
-}
-
-//  function d($value){
-//     if (is_array($value)){
-//         echo '<pre>' .var_dump($value); echo '</pre>';die();
-//     }
-//     if (is_object($value)){
-//        echo '<pre>'. print_r($value); echo '</pre>'; die();
-//     }
-//     else{
-//         var_dump($value);die();
-//     }
-// }
-
-$user = wp_get_current_user();
+<?php function d($value){
+    if (is_array($value)){
+        echo '<pre>' .var_dump($value); echo '</pre>';die();
+    }
+    if (is_object($value)){
+       echo '<pre>'. print_r($value); echo '</pre>'; die();
+    }
+    else{
+        var_dump($value);die();
+    }
+}?>
+<?php $user = wp_get_current_user();
 
 $args = array(
     'post_type' => 'program_partner',
@@ -75,13 +66,22 @@ foreach($students as $student){
 ?>
 
 <form class="" action="" method="post">
-	<select name="student">
-	    <?php foreach ($studentsSelectBox as $option) :?>
-	        <option value="<?php echo $option['value']?>"><?php echo $option['text'];?></option>
-	<?php endforeach;?>
-	</select>
-	<textarea class="notes" name="notes"></textarea>
-	<button class="submit" type="submit" name="submit">Submit</button>
+	<h1>Enter the Info for your CEE member here.</h1>
+	<div class="info__err">
+	    <span name="errMsg"></span>
+	</div>
+	<div class="info__listArea"]>
+		<select name="student" class="info__listArea--select">
+		    <?php foreach ($studentsSelectBox as $option) :?>
+		        <option value="<?php echo $option['value']?>"><?php echo $option['text'];?></option>
+		<?php endforeach;?>
+		</select>
+	</div>
+	<div class="info__inputArea">
+		<label for="note">Note</label><br />
+		<textarea class="notes info__inputArea--text" name="note" rows="10" name="notes"></textarea>
+		<button class="submit button-primary info__btn" type="submit" name="submit">Submit</button>
+	</div>
 </form>
 
 <?php
