@@ -14,6 +14,7 @@
 require_once plugin_dir_path( __FILE__ ) . 'includes/program-partner-post-type.php';
 require_once plugin_dir_path( __FILE__ ) . 'includes/generate-program-partner-input-button.php';
 require_once plugin_dir_path( __FILE__ ) . 'includes/members-custom-post-type.php';
+require_once plugin_dir_path( __FILE__ ) . 'includes/acf_fields.php';
 
 //PLUGIN RESOURCES
 function admin_load_js(){
@@ -21,4 +22,14 @@ function admin_load_js(){
     wp_enqueue_script( 'social_media_js', plugin_dir_url( __FILE__ ) . 'assets/js/script.js',  array('jquery'), '1.7.2' );
 }
 add_action('admin_enqueue_scripts', 'admin_load_js');
-
+function allow_wildcards( $where ) {
+    global $wpdb;
+    $where = str_replace(
+    "meta_key = 'program_%_name", 
+    "meta_key LIKE 'program_%_name",
+    $wpdb->remove_placeholder_escape($where)
+    );
+    return $where;
+    }
+    
+    add_filter('posts_where', 'allow_wildcards');
